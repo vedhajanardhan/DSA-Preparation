@@ -1,34 +1,32 @@
-// Problem: Check if Array is Sorted and Rotated
-// Platform: LeetCode (1752)
-// Approach: Count number of breaks in order
-// Time Complexity: O(n)
+// Problem: Two Sum
+// Platform: LeetCode (1)
+// Approach: Check all pairs using nested loops
+// Time Complexity: O(n^2)
 // Space Complexity: O(1)
 
-class CheckSortedAndRotated {
+class TwoSum {
 
     public static void main(String[] args) {
 
-        int[] nums = {3,4,5,1,2};
+        int[] nums = {2,7,11,15};
+        int target = 9;
 
-        boolean result = check(nums);
+        int[] result = twoSum(nums, target);
 
-        System.out.println(result);
+        System.out.println(result[0] + " " + result[1]);
     }
 
-    public static boolean check(int[] nums) {
+    public static int[] twoSum(int[] nums, int target) {
 
-        int count = 0;
-        int n = nums.length;
+        for(int i = 0; i < nums.length; i++) {
+            for(int j = i + 1; j < nums.length; j++) {
 
-        for(int i = 0; i < n; i++) {
-
-            // compare current with next (circular)
-            if(nums[i] > nums[(i + 1) % n]) {
-                count++;
+                if(nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
             }
         }
 
-        // valid if at most 1 break
-        return count <= 1;
+        return new int[]{-1, -1}; // if no solution
     }
 }
