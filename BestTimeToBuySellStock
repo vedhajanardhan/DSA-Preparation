@@ -1,0 +1,41 @@
+// Problem: Best Time to Buy and Sell Stock (LeetCode 121)
+// Find the maximum profit from buying and selling a stock
+// Approach: Track minimum price and maximum profit
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+class BestTimeToBuySellStock {
+
+    public static void main(String[] args) {
+
+        int[] prices = {7, 1, 5, 3, 6, 4};
+
+        int result = maxProfit(prices);
+
+        System.out.println("Maximum Profit: " + result);
+    }
+
+    public static int maxProfit(int[] prices) {
+
+        int minPrice = Integer.MAX_VALUE; // lowest price so far
+        int maxProfit = 0; // maximum profit
+
+        for (int i = 0; i < prices.length; i++) {
+
+            // update minimum price
+            if (prices[i] < minPrice) {
+                minPrice = prices[i];
+            }
+
+            // calculate profit
+            int profit = prices[i] - minPrice;
+
+            // update maximum profit
+            if (profit > maxProfit) {
+                maxProfit = profit;
+            }
+        }
+
+        return maxProfit;
+    }
+}
