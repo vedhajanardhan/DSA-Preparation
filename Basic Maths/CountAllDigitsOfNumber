@@ -1,1 +1,20 @@
+# Count All Digits in a Number
 
+class Solution {
+    public int countDigit(int n) {
+        int count = 0;
+
+        while (n > 0) {
+            n = n / 10;
+            count++;
+        }
+
+        return count;
+    }
+}
+
+### Time Complexity
+**O(log₁₀ n)**
+
+### Space Complexity
+**O(1)**
