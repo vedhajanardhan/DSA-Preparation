@@ -1,3 +1,5 @@
+##Armstrong number
+
 class Solution {
     public boolean isArmstrong(int n) {
 
@@ -15,3 +17,9 @@ class Solution {
         return sum == original;
     }
 }
+
+##Time complexity
+  o(n)
+
+##Space complexity
+  o(1)
