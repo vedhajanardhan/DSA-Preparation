@@ -1,3 +1,4 @@
+## GCD of two number: 
 class Solution {
     public int gcd(int a, int b) {
         while (b != 0) {
@@ -8,3 +9,9 @@ class Solution {
         return a;
     }
 }
+
+## Time complexity
+   o(log(min(n1,n2))
+
+## Space complexity
+   o(1)
