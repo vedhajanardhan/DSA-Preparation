@@ -1,1 +1,19 @@
+class Solution {
 
+    public void printName(int n) {
+
+        if (i > n) {
+            return;
+        }
+
+        System.out.println("Name");
+
+        printName(i + 1, n);
+    }
+}
+
+##Time Complexity: 
+  O(n)
+
+##Space Complexity: 
+  O(n)
