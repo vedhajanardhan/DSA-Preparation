@@ -1,0 +1,19 @@
+class Solution {
+
+    public void printNumbers(int n) {
+
+        if (i > n) {
+            return;
+        }
+
+        System.out.println(i);
+
+        printNumbers(i + 1, n);
+    }
+}
+
+##Time Complexity:
+  O(n)
+
+##Space Complexity: 
+  O(n)
