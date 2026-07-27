@@ -1,0 +1,21 @@
+#Factorial of a given number:
+
+class Solution {
+
+    public int factorial(int n) {
+
+        int fact = 1;
+
+        for (int i = 2; i <= n; i++) {
+            fact *= i;
+        }
+
+        return fact;
+    }
+}
+
+##Time Complexity: 
+  O(n)
+
+##Space Complexity: 
+  O(1)
